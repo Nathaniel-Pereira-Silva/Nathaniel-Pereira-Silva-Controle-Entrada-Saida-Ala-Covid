@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Menu {
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		RegraDeNegocio inserirElemento = new RegraDeNegocio();
+		RegrasDeNegocios inserirElemento = new RegrasDeNegocios();
 		
 		
 		
-		int op = RegraDeNegocio.op = 0;
+		int op = RegrasDeNegocios.op = 0;
 			
 			
 		while(true){
@@ -24,13 +24,13 @@ public class Menu {
 					
 				switch(op) {
 					case 1:
-						RegraDeNegocio.inserirElemento();
+						RegrasDeNegocios.inserirElemento();
 						break;
 					case   2 :
-						RegraDeNegocio.removerElemento(); 
+						RegrasDeNegocios.removerElemento(); 
 						break;
 					case 3 :
-						RegraDeNegocio.listarElemento();
+						RegrasDeNegocios.listarElemento();
 						break;
 					case  4 :
 						System.out.println("Obrigado por usar o programa!");
