@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-
-public class Exe1 {
+public class RegraDeNegocio {
 	static Scanner input = new  Scanner(System.in);
 	
 	
-	 static int limite = 4,op =0,ultimoFila1=-1,ultimoFila2=-1,ultimoFila3=-1;
+	 static int limite = 4,ultimoFila1=-1,ultimoFila2=-1,ultimoFila3=-1;
+	 public static int op;
 	 static String [] filaOxigenio1 =  new String[limite];
 	 static String [] filaOxigenio2 =  new String[limite];
 	 static String [] filaOxigenio3 =  new String[limite];
@@ -16,7 +16,7 @@ public class Exe1 {
 	
 	
 	 
-	 private static void removerElementoPosConsulta() {
+	 public static void removerElementoPosConsulta() {
 			
 			int idade; 
 			System.out.println("\n------Qual idade do paciente ? ------\n"
@@ -90,7 +90,7 @@ public class Exe1 {
 		
 	
 	
- 	private static void inserirElemento() {
+	public static void inserirElemento() {
 		int idade;
 			
 		System.out.println("\n----- Qual o nome do paciente ? ------");
@@ -147,7 +147,7 @@ public class Exe1 {
 	
 	
 	
-	private static void removerElemento() {
+	public static void removerElemento() {
 		int consultar;
 		
 		System.out.println("------Deseja consultar uma fila para remover algum paciente ?------\n"
@@ -181,7 +181,7 @@ public class Exe1 {
 	
 		
 	
-	private static void listarElemento() {
+	public static void listarElemento() {
 		System.out.println("\n------Qual a fila que deseja consultar ? ------\n"
 				+ "1_ -18 anos.\n"
 				+ "2_ 18 ente 60 anos\n"
@@ -229,51 +229,5 @@ public class Exe1 {
 
 
 
-	public static void main(String[] args) {
-		
-		
-		
-		while(true){
-
-			try{
-							
-				System.out.println("\n\n==========MENU==========");
-				System.out.println("1 - Adicionar Paciente na fila do oxiênio.");
-				System.out.println("2 - Remover paciênte da fila do oxigênio.");
-				System.out.println("3 - Listar lista de pacientes no oxigênio.");
-				System.out.println("4 - Sair");
-				System.out.println("Informe a opção numérica desejada: ");
-				op = input.nextInt();
-				
-				switch(op) {
-					case 1:
-						inserirElemento();	
-						break;
-					case   2 :
-						removerElemento(); 
-						break;
-					case 3 :
-						listarElemento();
-						break;
-					case  4 :
-						System.out.println("Obrigado por usar o programa!");
-						break;
-					default:
-						System.out.println("Opção númerica informada não consta na lista do menu! Entre com um"
-								+ " número válido. ");
-						
-					
-				
-				}
-				
 	
-			}catch (Exception e) {
-				System.out.println("\nDado incorreto. Lista finalizada.");
-				break;
-					
-					
-			}
-		 		
-		}
-	}
 }
