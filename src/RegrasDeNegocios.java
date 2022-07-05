@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
 public class RegrasDeNegocios {
-	static Scanner input = new  Scanner(System.in);
+	public static Scanner input = new  Scanner(System.in);
 	
 	
 	 static int limite = 4,ultimoFila1=-1,ultimoFila2=-1,ultimoFila3=-1;
-	 public static int op;
+	 public String op;
 	 static String [] filaOxigenio1 =  new String[limite];
 	 static String [] filaOxigenio2 =  new String[limite];
 	 static String [] filaOxigenio3 =  new String[limite];
@@ -16,7 +16,7 @@ public class RegrasDeNegocios {
 	
 	
 	 
-	 public static void removerElementoPosConsulta() {
+	 public void removerElementoPosConsulta() {
 			
 			int idade; 
 			System.out.println("\n------Qual idade do paciente ? ------\n"
@@ -90,11 +90,11 @@ public class RegrasDeNegocios {
 		
 	
 	
-	public static void inserirElemento() {
+	public void inserirElemento() {
 		int idade;
 			
 		System.out.println("\n----- Qual o nome do paciente ? ------");
-		paciente = input.next();
+		paciente = input.nextLine();
 		
 			
 		System.out.println("\n------Qual idade do "+paciente+"? ------\n"
@@ -136,7 +136,7 @@ public class RegrasDeNegocios {
 				System.out.println();
 				}
 		}else if(idade == 4){
-			op=0;
+			op="0";
 		}else{
 
 			System.out.println("insira um comando válido.");
@@ -147,7 +147,7 @@ public class RegrasDeNegocios {
 	
 	
 	
-	public static void removerElemento() {
+	public void removerElemento() {
 		int consultar;
 		
 		System.out.println("------Deseja consultar uma fila para remover algum paciente ?------\n"
@@ -172,7 +172,7 @@ public class RegrasDeNegocios {
 		}else if(consultar == 2){
 			removerElementoPosConsulta();
 		}else if( consultar == 3){
-			op=0;
+			op="0";
 		}else{
 			System.out.println("Comando invaálido");
 			removerElemento();
@@ -181,7 +181,7 @@ public class RegrasDeNegocios {
 	
 		
 	
-	public static void listarElemento() {
+	public void listarElemento() {
 		System.out.println("\n------Qual a fila que deseja consultar ? ------\n"
 				+ "1_ -18 anos.\n"
 				+ "2_ 18 ente 60 anos\n"
@@ -217,7 +217,7 @@ public class RegrasDeNegocios {
 			
 			
 		}else if(fila==4){
-			op=0;
+			op="0";
 		}else if(fila < 0 || fila > 4  ){
 			System.out.println("------ Número inválido. Digite novamente. ------");
 			listarElemento();

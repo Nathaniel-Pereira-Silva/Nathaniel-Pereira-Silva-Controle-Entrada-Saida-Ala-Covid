@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Menu {
 	public static void main(String[] args) {
 		Scanner input = new Scanner (System.in);
-		RegrasDeNegocios inserirElemento = new RegrasDeNegocios();
+		RegrasDeNegocios RegrasDeNegocios = new RegrasDeNegocios();
 		
 		
 		
-		int op = RegrasDeNegocios.op = 0;
+		String op = RegrasDeNegocios.op = "0";
 			
 			
 		while(true){
@@ -20,26 +20,26 @@ public class Menu {
 				System.out.println("3 - Listar lista de pacientes no oxigênio.");
 				System.out.println("4 - Sair");
 				System.out.println("Informe a opção numérica desejada: ");
-				op = input.nextInt();
+				op = input.nextLine();
 					
 				switch(op) {
-					case 1:
+					case "1":
 						RegrasDeNegocios.inserirElemento();
 						break;
-					case   2 :
+					case  "2" :
 						RegrasDeNegocios.removerElemento(); 
 						break;
-					case 3 :
+					case "3" :
 						RegrasDeNegocios.listarElemento();
 						break;
-					case  4 :
+					case  "4" :
 						System.out.println("Obrigado por usar o programa!");
 						break;
 					default:
 						System.out.println("Opção númerica informada não consta na lista do menu! Entre com um"
 								+ " número válido. ");
 							
-						
+					
 					
 				}
 					
@@ -50,5 +50,7 @@ public class Menu {
 			}
 			 		
 		}
+		
+		input.close();
 	}
 }
