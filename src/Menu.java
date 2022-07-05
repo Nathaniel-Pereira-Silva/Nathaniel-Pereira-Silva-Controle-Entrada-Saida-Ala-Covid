@@ -7,7 +7,7 @@ public class Menu {
 		
 		
 		
-		String op = RegrasDeNegocios.op = "0";
+		String op = RegrasDeNegocios.getOp();
 			
 			
 		while(true){
